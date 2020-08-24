@@ -5,15 +5,21 @@
 # Usage:
 # sh ./rasppi_lora_receiver_aws.sh  \
 #     lora-iot-gateway-01 \
-#     a1d0wxnxn1hs7m-ats.iot.us-east-1.amazonaws.com
+#     a1b2c3d4e5678f-ats.iot.us-east-1.amazonaws.com \
+#     1234abcdef5-certificate.pem.crt \
+#     1234abcdef5-private.pem.key
 
-if [[ $# -ne 2 ]]; then
-  echo "Script requires 3 parameters..."
+if [[ $# -ne 4 ]]; then
+  echo "Script requires 4 parameters..."
   exit 1
 fi
 
+# input parameters
 DEVICE=$1    # e.g. lora-iot-gateway-01
-ENDPOINT=$2  # e.g. a1d0wxnxn1hs7m-ats.iot.us-east-1.amazonaws.com
+ENDPOINT=$2  # e.g. a1b2c3d4e5678f-ats.iot.us-east-1.amazonaws.com
+CERT=$3      # e.g. 42141a25d6-certificate.pem.crt
+KEY=$4       # e.g. 42141a25d6-private.pem.key
+
 GATEWAY_ID=$(cat /proc/cpuinfo | grep Serial | grep -oh [a-z0-9]*$) # e.g. 00000000f62051ce
 
 echo "DEVICE: ${DEVICE}"
@@ -22,8 +28,8 @@ echo "GATEWAY_ID: ${GATEWAY_ID}"
 
 nohup python3 rasppi_lora_receiver_aws.py \
   --endpoint "${ENDPOINT}" \
-  --cert "lora-iot-gateway-01-creds/42141a25d6-certificate.pem.crt" \
-  --key "lora-iot-gateway-01-creds/42141a25d6-private.pem.key" \
+  --cert "lora-iot-gateway-01-creds/${CERT}" \
+  --key "lora-iot-gateway-01-creds/${KEY}" \
   --root-ca "lora-iot-gateway-01-creds/AmazonRootCA1.pem" \
   --client-id "${DEVICE}" \
   --topic "lora-iot-demo" \

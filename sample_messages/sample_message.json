@@ -1,0 +1,16 @@
+{
+    "data": {
+        "color": {
+            "ambient": 554,
+            "blue": 116,
+            "green": 141,
+            "red": 224
+        },
+        "device_id": "0447383033363932003C0034",
+        "gateway_id": "00000000f62051ce",
+        "humidity": 41.55,
+        "pressure": 99.58,
+        "temperature": 23.85
+    },
+    "ts": 1598216545.960682
+}

@@ -1,0 +1,14 @@
+{
+    "defaultclientid": "lora-iot-gateway-01",
+    "thingname": "lora-iot-gateway-01",
+    "thingid": "017db4b8-7fca-4617-aa58-7125dd94ab36",
+    "thingarn": "arn:aws:iot:us-east-1:123456789012:thing/lora-iot-gateway-01",
+    "thingtypename": "LoRaIoTGateway",
+    "attributes": {
+        "loramfr": "REYAX",
+        "gatewaymfr": "RaspberryPiFoundation",
+        "loramodel": "RYLR896"
+    },
+    "version": "2",
+    "billinggroupname": "LoRaIoTGateways"
+}

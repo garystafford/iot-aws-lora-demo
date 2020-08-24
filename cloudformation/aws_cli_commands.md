@@ -10,20 +10,21 @@ thingType=LoRaIoTGateway
 thingGroup=LoRaIoTGateways
 thingBillingGroup=LoRaIoTGateways
 
+mkdir ${thingName}
+
 aws iot create-keys-and-certificate \
     --certificate-pem-outfile "${thingName}/${thingName}.cert.pem" \
     --public-key-outfile "${thingName}/${thingName}.public.key" \
-    --private-key-outfile "${thingName}/${thingName}.private.key"
+    --private-key-outfile "${thingName}/${thingName}.private.key" \
     --set-as-active
 
-
-# for a specific certificate
-aws iot list-certificates
-# find your certificate
-certificate=arn:aws:iot:us-east-1:<account>:cert/<certificate>
-
-# assuming only one certificate
+# assuming you only have one certificate registered
 certificate=$(aws iot list-certificates | jq '.[][] | .certificateArn')
+
+# alternately, for a specific certificate, if you have more than one
+aws iot list-certificates
+# alternately, change the value below
+certificate=arn:aws:iot:us-east-1:123456789012:cert/<certificate>
 
 aws iot attach-policy \
     --policy-name $thingPolicy \

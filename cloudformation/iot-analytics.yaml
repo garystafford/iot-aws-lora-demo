@@ -305,9 +305,9 @@ Resources:
   BasicNotebookInstance:
     Type: "AWS::SageMaker::NotebookInstance"
     Properties:
-      NotebookInstanceName: IoTAnalyticsNotebook
+      NotebookInstanceName: LoRaIoTAnalyticsNotebook
       InstanceType: ml.t2.medium
-      DefaultCodeRepository: "https://github.com/garystafford/aws-iot-analytics-demo.git"
+      DefaultCodeRepository: "https://github.com/garystafford/iot-aws-lora-demo.git"
       RoleArn: !GetAtt SageMakerExecutionRole.Arn
   SageMakerExecutionRole:
     Type: "AWS::IAM::Role"

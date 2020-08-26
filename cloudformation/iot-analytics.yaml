@@ -81,8 +81,10 @@ Resources:
           Filter:
             Name: FilterActivity
             Filter: >-
-              temperature <> NULL OR humidity <> NULL OR pressure <> NULL OR red <> NULL OR
-              blue <> NULL OR green <> NULL OR ambient <> NULL
+              temperature <> NULL OR
+              humidity <> NULL OR humidity < 0 OR
+              pressure <> NULL OR
+              red <> NULL OR blue <> NULL OR green <> NULL OR ambient <> NULL
             Next: LambdaActivity
           Lambda:
             Name: LambdaActivity

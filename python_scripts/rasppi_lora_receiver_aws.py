@@ -16,7 +16,6 @@ from awsiot import mqtt_connection_builder
 # Requirements: python3 -m pip install --user -r requirements.txt
 # Usage:
 # sh ./rasppi_lora_receiver_aws.sh  \
-#     lora-iot-gateway-01 \
 #     a1d0wxnxn1hs7m-ats.iot.us-east-1.amazonaws.com
 
 

@@ -168,7 +168,7 @@ Resources:
           def lambda_handler(event, context):
               for e in event:
                   e['temperature'] = round((e['temperature'] * 1.8) + 32, 2)
-                  e['humidity'] = round(e['humidity'], 2)
+                  e['humidity'] = round((e['humidity'] / 3.3864), 2)
                   e['pressure'] = round(e['pressure'], 2)
                   e['red'] = int(round(e['red'] / (4097 / 255), 0))
                   e['green'] = int(round(e['green'] / (4097 / 255), 0))

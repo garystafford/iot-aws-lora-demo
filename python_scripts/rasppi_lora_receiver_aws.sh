@@ -28,9 +28,9 @@ echo "GATEWAY_ID: ${GATEWAY_ID}"
 # call the python script
 nohup python3 rasppi_lora_receiver_aws.py \
   --endpoint "${ENDPOINT}" \
-  --cert "lora-iot-gateway-01-creds/${CERTIFICATE}" \
-  --key "lora-iot-gateway-01-creds/${KEY}" \
-  --root-ca "lora-iot-gateway-01-creds/AmazonRootCA1.pem" \
+  --cert "${DEVICE}-creds/${CERTIFICATE}" \
+  --key "${DEVICE}-creds/${KEY}" \
+  --root-ca "${DEVICE}-creds/AmazonRootCA1.pem" \
   --client-id "${DEVICE}" \
   --topic "lora-iot-demo" \
   --gateway-id "${GATEWAY_ID}" \

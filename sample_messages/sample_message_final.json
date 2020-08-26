@@ -1,0 +1,18 @@
+[
+  {
+    "device_id": "0447383033363932003C0034",
+    "gateway_id": "00000000f62051ce",
+    "temperature": 71.73,
+    "humidity": 44.16,
+    "pressure": 99.71,
+    "red": 10,
+    "green": 6,
+    "blue": 5,
+    "ambient": 26,
+    "ts": 1598276166.19209,
+    "device": "lora-iot-gateway-01",
+    "msg_received": "2020-08-24T13:36:06.186+0000",
+    "metadata": "{defaultclientid=lora-iot-gateway-01, thingname=lora-iot-gateway-01, thingid=017db4b8-7fca-4617-aa58-7125dd94ab36, thingarn=arn:aws:iot:us-east-1:123456789012:thing/lora-iot-gateway-01, thingtypename=LoRaIoTGateway, attributes={loramfr=REYAX, gatewaymfr=RaspberryPiFoundation, loramodel=RYLR896}, version=2, billinggroupname=LoRaIoTGateways}",
+    "__dt": "2020-08-24 00:00:00.000"
+  }
+]

@@ -4,12 +4,10 @@ import sys
 import threading
 import time
 from argparse import ArgumentParser
-from datetime import datetime
 
 import serial
 from awscrt import io, mqtt, auth, http, exceptions
 from awsiot import mqtt_connection_builder
-from colr import color as colr
 
 # LoRaWAN IoT Sensor Demo
 # Using REYAX RYLR896 transceiver modules

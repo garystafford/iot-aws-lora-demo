@@ -1,14 +1,14 @@
 {
-  "ambient": 554,
-  "blue": 116,
-  "green": 141,
-  "red": 224,
+  "ambient": 1057,
+  "blue": 650,
+  "green": 667,
+  "red": 281,
   "device_id": "0447383033363932003C0034",
   "gateway_id": "00000000f62051ce",
-  "humidity": 41.55,
-  "pressure": 99.58,
-  "temperature": 23.85,
-  "ts": 1598216545.960682,
-  "msg_received": "2020-08-20T16:48:08.074+0000",
+  "humidity": 45.73,
+  "pressure": 98.65,
+  "temperature": 23.6,
+  "ts": 1598543131.9861386,
+  "msg_received": "2020-08-27T11:45:32.074+0000",
   "device": "lora-iot-gateway-01"
 }

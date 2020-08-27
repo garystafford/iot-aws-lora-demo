@@ -118,6 +118,7 @@ void getColor(int c[])
   c[3] = a;
 }
 
+// display for debugging purposes
 void displayResults(float t, float h, float p, int c[])
 {
   Serial.println((String)"UID: " + uid);

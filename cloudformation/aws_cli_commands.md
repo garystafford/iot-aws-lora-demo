@@ -25,9 +25,9 @@ aws iot create-keys-and-certificate \
 # assuming you only have one certificate registered
 certificate=$(aws iot list-certificates | jq '.[][] | .certificateArn')
 
-# # alternately, for a specific certificate, if you have more than one
+## alternately, for a specific certificate if you have more than one
 # aws iot list-certificates
-# # alternately, change the value below
+## then change the value below
 # certificate=arn:aws:iot:us-east-1:123456789012:cert/<certificate>
 
 aws iot attach-policy \

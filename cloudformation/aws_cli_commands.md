@@ -8,7 +8,7 @@ thingName=lora-iot-gateway-01
 thingPolicy=LoRaDevicePolicy
 thingType=LoRaIoTGateway
 thingGroup=LoRaIoTGateways
-thingBillingGroup=LoRaIoTGateways
+thingBillingGroup=IoTGateways
 
 mkdir ${thingName}
 

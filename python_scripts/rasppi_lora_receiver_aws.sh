@@ -3,8 +3,7 @@
 # Author: Gary A. Stafford
 # Start IoT data collector script and tails output
 # Usage:
-# sh ./rasppi_lora_receiver_aws.sh  \
-#     a1b2c3d4e5678f-ats.iot.us-east-1.amazonaws.com
+# sh ./rasppi_lora_receiver_aws.sh a1b2c3d4e5678f-ats.iot.us-east-1.amazonaws.com
 
 if [[ $# -ne 1 ]]; then
   echo "Script requires 1 parameter!"

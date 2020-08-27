@@ -3,6 +3,10 @@
 Run after CloudFormation stack is deployed.
 
 ```bash
+# LoRaWAN / AWS IoT Demo
+# Author: Gary Stafford
+# Run AWS CLI commands after CloudFormation stack completes successfully
+
 # variables
 thingName=lora-iot-gateway-01
 thingPolicy=LoRaDevicePolicy

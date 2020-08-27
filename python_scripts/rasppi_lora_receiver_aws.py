@@ -9,7 +9,7 @@ import serial
 from awscrt import io, mqtt, auth, http, exceptions
 from awsiot import mqtt_connection_builder
 
-# LoRaWAN IoT Sensor Demo
+# LoRaWAN / AWS IoT Demo
 # Using REYAX RYLR896 transceiver modules
 # http://reyax.com/wp-content/uploads/2020/01/Lora-AT-Command-RYLR40x_RYLR89x_EN.pdf
 # Author: Gary Stafford

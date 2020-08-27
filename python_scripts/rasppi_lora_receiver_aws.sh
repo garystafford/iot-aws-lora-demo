@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# LoRaWAN / AWS IoT Demo
 # Author: Gary A. Stafford
 # Start IoT data collector script and tails output
 # Usage:

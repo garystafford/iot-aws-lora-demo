@@ -14,8 +14,8 @@ fi
 # input parameters
 ENDPOINT=$1  # e.g. a1b2c3d4e5678f-ats.iot.us-east-1.amazonaws.com
 DEVICE="lora-iot-gateway-01" # matches CloudFormation thing name
-CERTIFICATE="${DEVICE}-certificate.pem.crt"  # e.g. lora-iot-gateway-01-certificate.pem.crt
-KEY="${DEVICE}-private.pem.key"  # e.g. lora-iot-gateway-01-private.pem.key
+CERTIFICATE="${DEVICE}-cert.pem"  # e.g. lora-iot-gateway-01-cert.pem
+KEY="${DEVICE}-private.key"  # e.g. lora-iot-gateway-01-private.key
 GATEWAY_ID=$(< /proc/cpuinfo grep Serial | grep -oh "[a-z0-9]*$") # e.g. 00000000f62051ce
 
 # output for debugging

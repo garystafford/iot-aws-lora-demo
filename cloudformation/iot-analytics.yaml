@@ -1,15 +1,16 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: IoT Analytics Stack Example
+Description: LoRaWAN IoT Analytics s
+  tack
 Parameters:
   ProjectName:
     Type: String
     MinLength: 1
-    Default: iot-analytics-demo
+    Default: lora-iot-analytics-demo
     Description: Project name value used in 'Project' tag.
   IoTTopicName:
     Type: String
     MinLength: 1
-    Default: iot-device-data
+    Default: lora-iot-demo
     Description: IoT Topic Name that your devices will send messages to.
 Resources:
   DevicePolicy:
@@ -36,7 +37,7 @@ Resources:
   IoTTopicRuleAllEvents:
     Type: "AWS::IoT::TopicRule"
     Properties:
-      RuleName: send_to_iot_analytics
+      RuleName: send_to_lora_iot_analytics
       TopicRulePayload:
         Description: Sends IoT device data to IoT Analytics Channel
         AwsIotSqlVersion: 2016-03-23
@@ -64,7 +65,7 @@ Resources:
   IoTAnalyticsChannel:
     Type: "AWS::IoTAnalytics::Channel"
     Properties:
-      ChannelName: iot_analytics_channel
+      ChannelName: lora_iot_analytics_channel
       RetentionPeriod:
         Unlimited: false
         NumberOfDays: 21
@@ -74,7 +75,7 @@ Resources:
   IoTAnalyticsPipeline:
     Type: "AWS::IoTAnalytics::Pipeline"
     Properties:
-      PipelineName: iot_analytics_pipeline
+      PipelineName: lora_iot_analytics_pipeline
       PipelineActivities:
         - Channel:
             Name: ChannelActivity
@@ -108,7 +109,7 @@ Resources:
   IoTAnalyticsDatastore:
     Type: "AWS::IoTAnalytics::Datastore"
     Properties:
-      DatastoreName: iot_analytics_data_store
+      DatastoreName: lora_iot_analytics_data_store
       RetentionPeriod:
         Unlimited: false
         NumberOfDays: 21
@@ -122,7 +123,7 @@ Resources:
         - ActionName: SqlAction
           QueryAction:
             SqlQuery: !Sub "select * from ${IoTAnalyticsDatastore}"
-      DatasetName: iot_analytics_data_set
+      DatasetName: lora_iot_analytics_data_set
       RetentionPeriod:
         Unlimited: false
         NumberOfDays: 21
@@ -181,7 +182,7 @@ Resources:
               return event
       Handler: index.lambda_handler
       Role: !GetAtt LambdaExecutionRole.Arn
-      Runtime: python3.7
+      Runtime: python3.8
       Timeout: 60
       MemorySize: 128
   DataSetOutputBucketRole:
